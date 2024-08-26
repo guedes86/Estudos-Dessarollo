@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Sueldo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculadora">
+        <h1>Calculadora de Sueldo</h1>
+        <form action="calculadora de sueldo">
+            <h2>Hora normal trabajadas</h2>
+            <label for="horanormal">Horas normales trabajadas:<input type="number" id="horanormal"></label>
+            <label for="valornormal">Valor hora unitária:<input type="number" id="valornormal"></label>
+            <h2>Hora extra trabajadas</h2>
+            <label for="horaextra">Horas extras trabajadas:<input type="number" id="horaextra"></label>
+            <label for="valorextra">Valor extra unitária:<input type="number" id="valorextra"></label>
+            <button type="button" onclick="valortotal()">Calcular</button>
+            <p id="resultado"></p>
+        </form>
+    </div>
+    <script>
+        function valortotal(){
+            let horanormal = parseInt(document.getElementById('horanormal').value);
+            let valornormal = parseInt(document.getElementById('valornormal').value);
+            let horaextra = parseInt(document.getElementById('horaextra').value);
+            let valorextra = parseInt(document.getElementById('valorextra').value);
+
+            let valortotalnormal = horanormal*valornormal;
+            let valortotalextra = horaextra*valorextra;
+
+            let valortotal = valortotalnormal+valortotalextra;
+
+            document.getElementById('resultado').textContent = "O valor total para hora normales trabajadas: "+valortotalnormal+ ". O valor total para hora extras trabajadas: " +valortotalextra+ ". O valor total a ser recebido : "+valortotal;
+        }
+    </script>
+</body>
+</html>
