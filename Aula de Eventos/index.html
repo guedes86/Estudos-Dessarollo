@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Evento </title>
+</head>
+<body>
+
+    <a href="www.google.com" id="teste">Clique Aqui!</a>
+    
+    <script>
+        const teste1 = document.getElementById('teste');
+
+        teste1.addEventListener('click',function(event){
+
+            event.preventDefault();
+
+            alert('Esse link nao funciona!');
+
+        });
+    </script>
+</body>
+</html>

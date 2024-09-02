@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso do Toggle</title>
+    <style>
+        .resaltar#teste {
+            background-color: yellow;
+        }
+
+        .azul {
+            background-color: #3f3fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="teste">Clique aqui!</div>
+    <button onclick="mudar()">Mudar cor</button>
+    <button onclick="mudar2()">Azul</button>
+
+    <script>
+        const mudar = document.getElementById('teste');
+        mudar.style.backgroundColor = '#3f3fff';
+        mudar.style.fontSize = '20px';
+    </script>
+    
+</body>
+</html>
